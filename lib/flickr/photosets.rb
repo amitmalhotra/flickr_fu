@@ -24,15 +24,16 @@ class Flickr::Photosets < Flickr::Base
     end
   
     def create_attributes(photoset)
-      # comment by : smeevil
-      #
-      # for some reason it was needed to call to_s on photoset.title and photoset.description
-      # without this it will not set the value correctly
+
       {
         :id => photoset[:id], 
         :num_photos => photoset[:photos],
-        :title => photoset.title.to_s,
-        :description => photoset.description.to_s
+        :title => photoset.title,
+        :description => photoset.description,
+        :primary => photoset[:primary],
+        :farm => photoset[:farm],
+        :server => photoset[:server],
+        :secret => photoset[:secret]        
        }
     end
   

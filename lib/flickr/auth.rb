@@ -13,6 +13,10 @@ class Flickr::Auth < Flickr::Base
     @frob=frob
   end
 
+  # set the token
+  def token= token
+    @token=token
+  end
   # generates the authorization url to allow access to a flickr account.
   # 
   # Params
@@ -58,7 +62,7 @@ class Flickr::Auth < Flickr::Base
   private
   def get_frob
     rsp = @flickr.send_request('flickr.auth.getFrob')
-
+    
     rsp.frob.to_s
   end
 
@@ -69,7 +73,7 @@ class Flickr::Auth < Flickr::Base
       YAML.load_file(@flickr.token_cache)
     elsif pass_through
       rsp = @flickr.send_request('flickr.auth.getToken', {:frob => self.frob})
-
+      
       Token.new(:token => rsp.auth.token.to_s, :permisions => rsp.auth.perms.to_s, :user_id => rsp.auth.user[:nsid], :username => rsp.auth.user[:username], :user_real_name => rsp.auth.user[:fullname])
     end
   end
