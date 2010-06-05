@@ -12,10 +12,10 @@ begin
   Jeweler::Tasks.new do |s|
     s.name = "flickr_fu"
     s.summary = "Provides a ruby interface to flickr via the REST api"
-    s.email = "ben@commonthread.com"
-    s.homepage = "http://github.com/commonthread/flickr_fu"
+    s.email = "amit@userharmony.com"
+    s.homepage = "http://github.com/userharmony/flickr_fu"
     s.description = "Provides a ruby interface to flickr via the REST api"
-    s.authors = ["Ben Wyrosdick", "Maciej Bilas"]
+    s.authors = ["Ben Wyrosdick", "Maciej Bilas", "Amit Malhotra"]
     s.rdoc_options = ["--main", "README"]
     s.extra_rdoc_files = ["README"]
     s.add_dependency("mime-types", ["> 0.0.0"])

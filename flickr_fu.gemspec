@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{flickr_fu}
-  s.version = "0.3.0"
+  s.name = %q{userharmony-flickr_fu}
+  s.version = "0.3.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Ben Wyrosdick", "Maciej Bilas"]
+  s.authors = ["Ben Wyrosdick", "Maciej Bilas", "Amit Malhotra"]
   s.date = %q{2009-05-19}
   s.description = %q{Provides a ruby interface to flickr via the REST api}
-  s.email = %q{ben@commonthread.com}
+  s.email = %q{amit@userharmony.com}
   s.extra_rdoc_files = [
     "README"
   ]
@@ -81,7 +81,7 @@ Gem::Specification.new do |s|
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/commonthread/flickr_fu}
+  s.homepage = %q{http://github.com/userharmony/flickr_fu}
   s.rdoc_options = ["--main", "README"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.3}
